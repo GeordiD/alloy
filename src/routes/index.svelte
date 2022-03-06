@@ -1,5 +1,6 @@
 <script>
 	import Button from '$lib/Button.svelte';
+	import '../tailwind.css';
 </script>
 
 <h1>Welcome to SvelteKit</h1>
