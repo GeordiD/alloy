@@ -1,6 +1,6 @@
 {
-  "name": "alloy2",
-  "version": "0.0.1",
+  "name": "alloy",
+  "version": "0.1.0",
   "main": "src/lib/index.js",
   "scripts": {
     "dev": "svelte-kit dev",
