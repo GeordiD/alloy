@@ -5,13 +5,20 @@
 </script>
 
 <Meta
-	title="Button-MYBUTTON"
+	title="Button"
 	component={Button}
 	argTypes={{
 		variant: {
 			control: {
 				type: 'select',
-				options: ['primary', 'secondary']
+				options: [
+					'primary', 
+					'secondary',
+					'success',
+					'danger',
+					'warning',
+					'info',
+				]
 			}
 		}
 	}}
@@ -32,7 +39,7 @@
 />
 
 <Story
-	name="Secorday"
+	name="Secondary"
 	args={{
 		variant: 'secondary'
 	}}
