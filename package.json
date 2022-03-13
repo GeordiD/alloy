@@ -5,7 +5,6 @@
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
-    "package": "svelte-kit package && npm run tailwind",
     "preview": "svelte-kit preview",
     "prepare": "svelte-kit sync",
     "check": "svelte-check --tsconfig ./tsconfig.json",
@@ -13,9 +12,12 @@
     "lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
     "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
     "tailwind": "tailwindcss -o package/alloy.css -c tailwind.config.cjs",
-    "pack": "npm pack ./package",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "packup": "npm run package && npm run tailwind && npm run copy_tailwind_config && npm run pack",
+    "package": "svelte-kit package",
+    "pack": "npm pack ./package",
+    "copy_tailwind_config": "cp ./tailwind.config.cjs ./package/alloy.config.cjs"
   },
   "devDependencies": {
     "@babel/core": "^7.17.5",
@@ -52,6 +54,7 @@
   },
   "type": "module",
   "exports": {
-    "./alloy.css": "./alloy.css"
+    "./alloy.css": "./alloy.css",
+    "./alloy.config.cjs": "./alloy.config.cjs"
   }
 }

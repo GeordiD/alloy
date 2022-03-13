@@ -1,20 +1,29 @@
+const colors = require('tailwindcss/colors');
+
+const alloy = {
+	colors: {
+		primary: colors.blue[500],
+		secondary: colors.transparent,
+		success: colors.green[600],
+		danger: colors.red[500],
+		warning: colors.yellow[300],
+		info: colors.teal[500],
+		light: colors.white,
+		dark: colors.black
+	}
+};
+
 module.exports = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		extend: {
 			colors: {
-				primary: 'rgb(59, 130, 246)',
-				'primary-text': '#fff',
-				secondary: 'rgba(0, 0, 0, 0)',
-				'secondary-text': 'rgb(59, 130, 246)',
-				success: 'rgb(34, 197, 94)',
-				'success-text': '#fff',
-				danger: 'rgb(239, 68, 68)',
-				'danger-text': '#fff',
-				warning: 'rgb(253, 224, 71)',
-				'warning-text': '#000',
-				info: 'rgb(20, 184, 166)',
-				'info-text': '#fff'
+				primary: alloy.colors.primary,
+				'primary-text': alloy.colors.light,
+				'primary-border': alloy.colors.primary,
+				secondary: alloy.colors.secondary,
+				'secondary-text': alloy.colors.primary,
+				'secondary-border': alloy.colors.primary
 			}
 		}
 	},
