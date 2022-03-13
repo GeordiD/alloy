@@ -1,11 +1,18 @@
 <script lang="ts">
   import { Variant } from '$lib/constants/variant';
 
-	export let variant: Variant = Variant.Primary;
+	export let variant = 'primary';
 	export let cls = '';
+
+	let variantClass: string;
+
+	$: {
+		const isValid = Object.values(Variant).includes(variant as Variant);
+		variantClass = isValid ? variant : Variant.Primary;		
+	}
 </script>
 
-<button class="button px-3 py-1 rounded-md border-2 {variant} {cls}" on:click|preventDefault>
+<button class="button px-3 py-1 rounded-md border-2 {variantClass} {cls}" on:click|preventDefault>
 	<slot>Default Button</slot>
 </button>
 

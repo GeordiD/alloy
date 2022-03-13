@@ -14,10 +14,10 @@
 				options: [
 					'primary', 
 					'secondary',
-					'success',
-					'danger',
-					'warning',
-					'info',
+					// 'success',
+					// 'danger',
+					// 'warning',
+					// 'info',
 				]
 			}
 		}
