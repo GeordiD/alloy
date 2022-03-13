@@ -1,5 +1,9 @@
-import Button from '$lib/Button.svelte';
+import Button from '$lib/buttons/Button.svelte';
+import FormInput from '$lib/forms/FormInput.svelte';
+import PasswordInput from '$lib/forms/PasswordInput.svelte';
 
 export default {
-	Button
+	Button,
+	FormInput,
+	PasswordInput
 };
