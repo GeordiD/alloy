@@ -1,6 +1,6 @@
-import Button from '$lib/buttons/Button.svelte';
-import FormInput from '$lib/forms/FormInput.svelte';
-import PasswordInput from '$lib/forms/PasswordInput.svelte';
+import Button from './buttons/Button.svelte';
+import FormInput from './forms/FormInput.svelte';
+import PasswordInput from './forms/PasswordInput.svelte';
 
 export default {
 	Button,
